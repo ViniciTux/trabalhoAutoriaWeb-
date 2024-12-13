@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Fórmulario de Cadastro</title>
+   <link rel="shortcut icon" href="creeper.ico" type="image/x-icon">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/d8fb36a4f1.js" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+</head>
+<body>
+   <header>
+      <div class="nav">
+         <nav>
+            <a href="paginaDosDevs.html" title="Pagina dos devs." target="_self" rel="noopener noreferrer" ><i class="fa fa-code" aria-hidden="true"></i></a>
+         </nav>
+      </div>
+   </header>
+   <hr>
+   <main>
+      <div class="form-header">
+         <h1>Cadastro para vaga de emprego</h1>
+         <p><b>" * "</b> = Resposta obrigatória.</p>
+      </div>
+      <hr>
+      <div class="form">
+         <form action="server.php" method="POST" autocomplete="on">
+            <section class="dadospessoais">
+               <h2>1. Dados Pessoais:</h2>
+               <div class="box-input">
+                  <input type="text" name="complet-name" id="complet-name" maxlength="60" placeholder="&#x1F464; * Nome completo:" required>
+               </div>
+               <div class="box-input">
+                  <div><b>* Sexo:</b></div>
+                  <input type="radio" name="sexo" id="sexom" value="Masculino" required>
+                  <label for="sexom">Masculino &#x2642;</label>
+                  <input type="radio" name="sexo" id="sexof" value="Feminino" required>
+                  <label for="sexof">Feminino &#x2640;</label>
+               </div>
+               <div class="box-input">
+                  <label for="date"><b>* Data de nascimento &#x1F476;:</b> </label><br>
+                  <input type="date" name="date" id="date" required>
+               </div>
+               <div class="box-input">
+                  <input type="text" name="cpf" id="cpf" maxlength="11" minlength="11" placeholder="&#x1FAAA; * CPF:" required>
+               </div>
+               <div class="box-select">
+                  <select name="estadocivil" id="estadocivil" required>
+                     <option value="" selected disabled>&#x1F469;&#x200D;&#x2764;&#x200D;&#x1F468; * Estado civil:</option>
+                     <option value="Solteiro">Solteiro</option>
+                     <option value="Casado">Casado</option>
+                     <option value="Divorciado">Divorciado</option>
+                     <option value="Viuvo">Viúvo</option>
+                  </select>
+               </div>
+            </section>
+            <hr>
+            <section class="contact">
+               <h2>2. Dados de Contato:</h2>
+               <div class="box-input">
+                  <input type="tel" id="number" name="number"  maxlength="11" placeholder="&#x1F4DE; * DDD + Número de telefone:" required>
+               </div>
+               <div class="box-input">
+                  <input type="email" name="emailprofissional" id="emailprofissional" placeholder="&#x1F4E7; * E-mail profissional:" required>
+               </div>
+               <div class="box-input">
+                  <input type="url" id="linkedin" name="linkedin" placeholder="&#x1F517; * Url do LinkedIn:" required>
+               </div>
+            </section>
+            <hr>
+            <section class="secendereco">
+               <h2>3. Endereço:</h2>
+               <div class="box-input">
+                  <input type="text" name="cep" id="cep" maxlength="8" minlength="8" placeholder="* CEP:" required>
+               </div>
+               <div class="box-select">
+                  <select name="estado" id="estado" required>
+                  <option value="" selected disabled>&#x1F4CD; * Estado:</option>
+                  <option value="Acre">Acre</option>
+                  <option value="Alagoas">Alagoas</option>
+                  <option value="Amapa">Amapá</option>
+                  <option value="Amazonas">Amazonas</option>
+                  <option value="Bahia">Bahia</option>
+                  <option value="Ceara">Ceará</option>
+                  <option value="Espirito_Santo">Espirito Santo</option>
+                  <option value="Goias">Goiás</option>
+                  <option value="Maranhao">Maranhão</option>
+                  <option value="Mato_Grosso">Mato Grosso</option>
+                  <option value="Mato_Grosso_Do_Sul">Mato Grosso do Sul</option>
+                  <option value="MinasGerais">Minas Gerais</option>
+                  <option value="Para">Pará</option>
+                  <option value="Paraiba">Paraiba</option>
+                  <option value="Parana">Paraná</option>
+                  <option value="Pernambuco">Pernambuco</option>
+                  <option value="Piaui">Piauí</option>
+                  <option value="Rio_de_janeiro">Rio de Janeiro</option>
+                  <option value="Rio_Grande_Do_Norte">Rio Grande do Norte</option>
+                  <option value="Rio_Grande_Do_Sul">Rio Grande do Sul</option>
+                  <option value="Rondonia">Rondônia</option>
+                  <option value="Roraima">Roraima</option>
+                  <option value="Santa_Catarina">Santa Catarina</option>
+                  <option value="Sao_Paulo">São Paulo</option>
+                  <option value="Sergipe">Sergipe</option>
+                  <option value="Tocantins">Tocantins</option>
+                  <option value="Distrito_Federal">Distrito Federal(Brasília)</option>
+               </select>
+               </div>
+               <div class="box-input">
+                  <input type="text" name="cidade" id="cidade" placeholder="* Cidade:" required>
+               </div>
+               <div class="box-input">
+                  <input type="text" name="bairro" id="bairro" placeholder="* Bairro:" required>
+               </div>
+               <div class="box-select">
+                  <select name="tipodeendereco" id="tipodeendereco" required>
+                  <option value="" selected disabled>&#x1F6B6; * Tipo de endereço:</option>
+                  <option value="Avenida">Avenida</option>
+                  <option value="Rua">Rua</option>
+                  <option value="Praca">Praça</option>
+                  <option value="Estrada">Estrada</option>
+                  <option value="Campo">Campo</option>
+                  <option value="Chacara">Chácara</option>
+                  <option value="Colonia">Colônia</option>
+                  <option value="Condominio">Condomínio</option>
+                  <option value="Conjunto">Conjunto</option>
+                  <option value="Fazenda">Fazenda</option>
+                  <option value="Ladeira">Ladeira</option>
+                  <option value="Outros">Outros</option>
+               </select>
+               </div>
+               <div class="box-input">
+                  <input type="text" name="endereco" id="endereco" placeholder="&#127968; * Endereço:" required>
+               </div>
+               <div class="box-input">
+                  <input type="number" name="numberofhouse" id="numberofhouse" placeholder="* Número:" required>
+               </div>
+               <div class="box-input">
+                  <input type="text" name="complement" id="complement" placeholder="Complemento(opcional):">
+               </div>
+               <div class="box-input">
+                  <input type="text" name="pontodereferencia" id="pontodereferencia" placeholder="Ponto de referência(opcional):">
+               </div>
+            </section>
+            <hr>
+            <section class="sobreaconta">
+               <h2>4. Sobre a sua conta:</h2>
+               <div class="box-input">
+                  <input type="email" name="email" id="email" placeholder="&#x1F4E7; * Digite seu e-mail:" required>
+               </div>
+               <div class="box-input">
+                  <input type="password" name="senha" id="senha" placeholder="&#x1F512; * Crie uma senha:" minlength="8" required>
+                  <button type="button" id="toggleSenha" onclick="mostrarSenha('senha', 'toggleSenhaIcon')">
+                  <i id="toggleSenhaIcon" class="fa fa-eye" aria-hidden="true"></i>
+                  </button>
+               </div>
+            </section>
+            <hr>
+            <section class="ok">
+               <div class="box-input">
+                  <input type="checkbox" id="check" name="check" required>
+                  <label for="check">&#x1F4C4; * Eu li e concordo com os <a href="termosdeuso.html" title="Acessar termos de uso." target="_self" rel="noopener noreferrer">termos de uso</a>.</label>
+               </div>
+               <hr>
+               <div class="box-ok">
+                  <input type="submit" value="Enviar cadastro" class="botao" style="background-color: #9acd32;">
+                  <input type="reset" value="Limpar campos" class="botao" style="background-color: #f44e3f;">
+               </div>
+            </section>
+         </form>
+      </div>
+   </main>
+   <hr>
+  <footer>
+        <p>IFRN campus Santa Cruz<br>Trabalho de Autoria Web<br><a href="mailto:marcelo.junior@ifrn.edu.br" title="E-mail do professor" target="_blank" rel="noopener noreferrer">Prof. Marcelo Figueiredo Barbosa Júnior</a></p>
+        <p>Componentes do grupo:<br><a href="mailto:vinicius.basilio@escolar.ifrn.edu.br" title="E-mail do Vinicius" target="_blank" rel="noopener noreferrer">- Vinicius Basilio da Silva Sousa</a><br><a  href="mailto:halisson.j@escolar.ifrn.edu.br>" title="E-mail de Halisson" target="_blank" rel="noopener noreferrer">- José Halisson dos Santos Souza</a><br><a href="mailto:isaac.alexander@escolar.ifrn.edu.br>" title="E-mail de Isaac" target="_blank" rel="noopener noreferrer">- Isaac Alexander de Azevedo Nascimento</a></p>
+        <p>Referencias:<br><a href="https://youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&si=P48Lk9n_9KieZ8Nj" title="Playlist do guanabara">Curso de HTML5 e CSS3 - Módulo 1</a><br><a href="https://youtube.com/playlist?list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&si=1HPtb1NaHITEPEkO" title="Playlist do guanabara 2">Curso de HTML5 e CSS3 - Módulo 2</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+   font-family: Arial, Helvetica, sans-serif;
+}
+body {
+   background-image: url(ceucomestrelas.jpg);
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+main {
+   background-color: white;
+   margin: 15px;
+   border-style: solid;
+   border-width: 4px;
+   border-color: black;
+   border-radius: 15px;
+   box-shadow: 5px 5px 10px rgba(0, 10, 10, 30);
+}
+footer {
+   font-size: 12px;
+   color: gray;
+   display: flex;
+   background-color: white;
+   border-radius: 15px;
+}
+footer p {
+   margin: 20px;
+}
+footer a {
+   color: inherit;
+}
+h1 {
+   text-align: center;
+}
+h2 {
+   margin: 15px;
+}
+input, select {
+   height: 70px;
+   width: 100%;
+   max-width: 867px;
+   border-radius: 5px;
+   border-width: 1px;
+   margin: 15px;
+}
+input::placeholder {
+   padding-left: 7px;
+   color: black;
+}
+input[name="check"], input[name="sexo"] {
+   vertical-align: middle;
+   height: 30px;
+   width: auto;
+}
+label {
+   vertical-align: middle;
+}
+.box-input {
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+
+#toggleSenha {
+   background: none;
+   border: none;
+   position: absolute;
+   right: 25px;
+   cursor: pointer;
+   font-size: 18px;
+}
+
+.form-header p {
+   font-size: 15px;
+   color: red;
+   text-align: center;
+}
+main, .form, .box-input, .box-select {
+   text-align: left;
+}
+.box-ok {
+   text-align: center;
+}
+.botao {
+   height: 50px;
+   width: 100%;
+   max-width: 310px;
+   font-size: 16px;
+   margin: 5px;
+}
+.nav {
+   height: 35px;
+   text-align: right;
+   background-color: white;
+   border-radius: 15px;
+}
+.nav a {
+   font-size: 30px;
+   color: #00ff00;
+   margin: 20px;
+   text-decoration: none;
+}
+.box-select, .box-input {
+   width: 100%;
+   max-width: 907px;
+   margin: 10px;
+}
+.ok a{
+   text-decoration: none;
+}
+@media (max-width: 768px) {
+   input, select {
+      max-width: 310px;
+      width: 100%;
+      height: 50px;
+   }
+   main {
+      margin: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 10, 10, 30);
+   }
+   main, .form, .box-input, .box-select {
+      text-align: center ;
+   }
+   .box-select, .box-input {
+      max-width: 350px;
+   }
+   .nav a {
+      font-size: 33px;
+      margin: 15px;
+   }
+   .botao {
+      width: 100%;
+      height: 35px;
+      margin-bottom: 10px;
+   }
+}
